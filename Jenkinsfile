@@ -21,7 +21,7 @@
         stage('Compile Code') {
             steps {
                 echo 'using Maven Compile the code'
-		sh 'mvn clean compile'    
+		bash 'mvn clean compile'    
 
             }
         }
