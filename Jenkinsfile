@@ -23,5 +23,10 @@ pipeline {
                 echo 'Package code using Maven package command'
             }
         }
+        stage('Another Stage') {
+            steps {
+                echo 'Another Stage Added'
+            }
+        }
     }
 }
