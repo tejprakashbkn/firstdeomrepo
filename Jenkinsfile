@@ -1,4 +1,4 @@
-pipeline {
+		pipeline {
     agent any
     environment {
          GIT_CRED_ID = '35565503-41e8-4c64-88bb-66d301030a58'
@@ -21,22 +21,20 @@ pipeline {
         stage('Compile Code') {
             steps {
                 echo 'using Maven Compile the code'
+		sh 'mvn clean compile'    
+
             }
         }
         stage('Run Test Cases') {
             steps {
                 echo 'Run Test Cases using Maven'
-                sh 'ls'
+                sh 'mvn test'
             }
         }
         stage('Package the Code') {
             steps {
                 echo 'Package code using Maven package command'
-            }
-        }
-        stage('Another Stage') {
-            steps {
-                echo 'Another Stage Added'
+		sh 'mvn package'
             }
         }
     }
