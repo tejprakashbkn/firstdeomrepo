@@ -11,7 +11,7 @@ pipeline {
                 step([$class: 'WsCleanup'])
                 checkout([
 	                $class: 'GitSCM', 
-	                branches: [[name: 'main']],  
+	                branches: [[name: 'master']],  
 	                userRemoteConfigs: [[credentialsId: GIT_CRED_ID, url: REPO_URL]]
 	                ])
 	           sh "ls -l"
