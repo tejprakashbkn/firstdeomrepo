@@ -3,6 +3,7 @@
     environment {
          GIT_CRED_ID = '35565503-41e8-4c64-88bb-66d301030a58'
         REPO_URL = 'git@github.com:tejprakashbkn/jenkins-example.git'
+	    
     }
     stages {
         stage('Git Checkout') {
@@ -21,7 +22,7 @@
         stage('Compile Code') {
             steps {
                 echo 'using Maven Compile the code'
-		bash 'mvn clean compile'    
+		sh '/usr/bin/mvn clean compile'    
 
             }
         }
