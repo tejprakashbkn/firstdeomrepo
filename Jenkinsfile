@@ -1,8 +1,7 @@
 		pipeline {
     agent any
 			tools {
-				maven 'M2_HOME' 
-				jdk 'JAVA_HOME' 
+				maven 'Maven_3_5_0'  
 			}
     environment {
          GIT_CRED_ID = '35565503-41e8-4c64-88bb-66d301030a58'
